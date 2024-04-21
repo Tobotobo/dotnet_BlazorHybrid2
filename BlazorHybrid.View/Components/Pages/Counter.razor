@@ -1,0 +1,25 @@
+﻿@page "/counter"
+
+<PageTitle>Counter</PageTitle>
+
+<h1>Counter</h1>
+
+<p role="status">Current count: @currentCount</p>
+<p>現在の数は @(currentCount + 1) です。</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">+</button>
+<button class="btn btn-primary" @onclick="DecrementCount">-</button>
+
+@code {
+    private static int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount += 2;
+    }
+
+    private void DecrementCount()
+    {
+        currentCount -= 2;
+    }
+}
